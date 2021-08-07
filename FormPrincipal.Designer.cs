@@ -29,7 +29,10 @@ namespace RicardoMilosTrap
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.pb_Principal = new System.Windows.Forms.PictureBox();
+            this.NIPrincipal = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Principal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,6 +47,14 @@ namespace RicardoMilosTrap
             this.pb_Principal.TabIndex = 0;
             this.pb_Principal.TabStop = false;
             // 
+            // NIPrincipal
+            // 
+            this.NIPrincipal.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.NIPrincipal.Icon = ((System.Drawing.Icon)(resources.GetObject("NIPrincipal.Icon")));
+            this.NIPrincipal.Text = "Click Me";
+            this.NIPrincipal.Visible = true;
+            this.NIPrincipal.Click += new System.EventHandler(this.NIPrincipal_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -53,11 +64,13 @@ namespace RicardoMilosTrap
             this.ControlBox = false;
             this.Controls.Add(this.pb_Principal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = global::RicardoMilosTrap.Properties.Resources.logo_Ricardo;
             this.KeyPreview = true;
-            this.Icon = Properties.Resources.logo_Ricardo;
             this.Name = "Principal";
             this.ShowInTaskbar = false;
             this.Text = "RicardoMilusTrap";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Activated += new System.EventHandler(this.Principal_Activated);
             this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Principal)).EndInit();
             this.ResumeLayout(false);
@@ -67,6 +80,7 @@ namespace RicardoMilosTrap
         #endregion
 
         private System.Windows.Forms.PictureBox pb_Principal;
+        private System.Windows.Forms.NotifyIcon NIPrincipal;
     }
 }
 

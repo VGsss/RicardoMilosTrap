@@ -11,20 +11,31 @@ namespace RicardoMilosTrap
             InitializeComponent();
         }
 
+        private SoundPlayer player = new SoundPlayer
+        {
+            Stream = Properties.Resources.Basshunter___Dota
+        };
+
         private void Principal_Load(object sender, EventArgs e)
         {
-            SoundPlayer player = new SoundPlayer
-            {
-                Stream = Properties.Resources.Basshunter___Dota
-            };
-            player.PlayLooping();
-
             Location = new System.Drawing.Point(0, 0);
             Width = Screen.PrimaryScreen.Bounds.Width;
             Height = Screen.PrimaryScreen.Bounds.Height;
 
-            pb_Principal.Width = Width;
-            pb_Principal.Height = Height;
+            pb_Principal.Width = Screen.PrimaryScreen.Bounds.Width;
+            pb_Principal.Height = Screen.PrimaryScreen.Bounds.Height;
+        }
+
+        private void NIPrincipal_Click(object sender, EventArgs e)
+        {
+            ShowInTaskbar = true;
+            NIPrincipal.Visible = false;
+            WindowState = FormWindowState.Normal;
+        }
+
+        private void Principal_Activated(object sender, EventArgs e)
+        {
+            player.PlayLooping();
         }
     }
 }
