@@ -51,7 +51,6 @@ namespace RicardoMilosTrap
             // 
             this.NIPrincipal.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.NIPrincipal.Icon = ((System.Drawing.Icon)(resources.GetObject("NIPrincipal.Icon")));
-            this.NIPrincipal.Text = "Click Me";
             this.NIPrincipal.Visible = true;
             this.NIPrincipal.Click += new System.EventHandler(this.NIPrincipal_Click);
             // 

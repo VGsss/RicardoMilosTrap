@@ -63,9 +63,9 @@ namespace RicardoMilosTrap.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Basshunter___Dota {
+        internal static System.IO.UnmanagedMemoryStream Basshunter_Dota {
             get {
-                return ResourceManager.GetStream("Basshunter___Dota", resourceCulture);
+                return ResourceManager.GetStream("Basshunter-Dota", resourceCulture);
             }
         }
         

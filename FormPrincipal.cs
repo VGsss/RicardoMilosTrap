@@ -11,9 +11,9 @@ namespace RicardoMilosTrap
             InitializeComponent();
         }
 
-        private SoundPlayer player = new SoundPlayer
+        private readonly SoundPlayer player = new SoundPlayer
         {
-            Stream = Properties.Resources.Basshunter___Dota
+            Stream = Properties.Resources.Basshunter_Dota
         };
 
         private void Principal_Load(object sender, EventArgs e)
